@@ -1,0 +1,310 @@
+/*
+Css for login-screen
+*/
+
+.responsive{
+      display: flex; 
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+}
+
+.default{
+      display: flex; 
+      flex-direction: column;
+      flex-wrap: wrap;
+      position: absolute; 
+      margin-left: 60%; 
+      top: 40% ;
+}
+
+.hrcLogo{
+      margin-top:10px;
+}
+
+.artLogo{
+      transform: scaleX(-1);
+      max-width:100%;
+      min-width:100%;
+      margin-bottom: 20px;
+}
+
+.heading{
+      margin-left: 10px;
+      padding-left:4%;
+      padding-right:4%;
+      padding-top:1%;
+      padding-bottom:1%;
+      background-color: #8fd163;
+      border-radius: 8px;
+}
+
+.heading-text{
+      color:#fff;
+      font-family: century-gothic;
+      align-self: center;
+      white-space: nowrap;
+}
+
+.input-box{
+      border-bottom-color: #f48400;
+      border-right:hidden;
+      border-left:hidden;
+      border-top:hidden;
+      background-color: #F3FBFE;
+      width:300px;
+      height:30px;
+      margin-top: 2px;
+}
+
+.input-box:focus{
+      outline:none;
+}
+
+.signin{
+      font-size:22px;
+      color:#666666;
+}
+
+.login-error{
+      color:red;
+      font-family: monospace;
+}
+
+.button-text{
+      color:#fff;
+      font-size: 16px;
+      font-weight: bold;
+}
+
+.submit-button{
+      height:38px;
+      width:130px;
+      border-radius: 6px;
+      background-color:#666666;
+      border:hidden;
+}
+
+.submit-button:disabled{
+      background-color:#d8d8d8;
+}
+
+/*
+Css for dashboard
+*/
+.logos{
+      margin-top:5px;
+      min-height:10%;
+      min-width:20%;
+}
+
+.signout-button{
+      height:50px;
+      width:160px;
+      border-radius: 6px;
+      background-color:#666666;
+      border:hidden;
+      margin-top:25px;
+      font-family: roboto;
+}
+
+.signout-button-text{
+      width:100%;
+      color:#fff;
+      font-size: 16px;
+      font-weight: bold;
+}
+
+.add-edit-button{
+      height:38px;
+      width:130px;
+      border-radius: 6px;
+      background-color:#fc7500;
+      border:hidden;
+      font-family: roboto;
+      margin:1px 10px 1px 1px;
+}
+
+.add-edit-button:disabled{
+      background-color:#d8d8d8;
+}
+.add-edit-button .tooltip-text {
+      visibility: hidden;
+      width: 120px;
+      background-color: black;
+      color: #fff;
+      text-align: center;
+      border-radius: 6px;
+      padding: 5px 0;
+      position: absolute;
+      z-index: 1;
+}
+
+.add-edit-button:hover:disabled .tooltip-text{
+      visibility: visible;
+}
+
+.search-box{
+      height:40px;
+      width:160px;
+      margin-left:63vw;
+      border:hidden;
+      background-image:url("./assests/search-logo.png");   
+      background-position:right;   
+      background-repeat:no-repeat;   
+      background-color: #F3FBFE;
+      font-family: roboto;
+      font-size:18px;  
+      transition-property: width;
+      transition-duration: 0.4s; 
+}
+
+.arrow-hidden::-webkit-outer-spin-button,
+.arrow-hidden::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.search-box:focus{
+      width:220px;
+      outline:none;
+      transition-property: width;
+      transition-duration: 0.4s;
+}
+
+.search-box::placeholder {
+      color: black;
+      font-size: 16px;
+}
+
+.dashboard{
+      border:4px;
+      border-radius:4px;
+      border-style: solid;
+      border-color:#d8d8d8;
+      padding:8px;
+      overflow-y: scroll;
+}
+
+/*
+Css for Table
+*/
+
+.table-style{
+      width:100%;
+      font-family: century-gothic;
+      font-size: 2.2vh;
+      border:none;
+}
+
+
+.table-style tr{
+      line-height: 5.2vh;
+}
+
+.checkbox :checked{
+      background-color: #fc7500;
+}
+
+.cell-style{
+      padding:0 1%;
+}
+
+.even-row{
+      background-color: #F3FBFE;
+}
+
+.odd-row{
+      background-color: #fff;
+}
+
+.page-button{
+      height:35px;
+      width:35px;
+      font-size:13px;
+      border:hidden;
+      color:#61B4E4;
+      background-color:  #F3FBFE;
+      font-weight: bold;
+      font-family: "Helvetica";
+      margin-left:10px;
+}
+
+.page-button:disabled{
+      color:#61B4E4AA;
+      background-color:  #F3FBFEAA;
+}
+.page-button .tooltip-text {
+      visibility: hidden;
+      width: 40px;
+      background-color: black;
+      color: #fff;
+      text-align: center;
+      border-radius: 6px;
+      padding: 5px 0;
+      position: absolute;
+      z-index: 1;
+}
+
+.page-button:hover:enabled .tooltip-text{
+      visibility: visible;
+}
+
+.pagination-style{
+      margin-left:10px;
+}
+
+.pageno-input{
+      margin-left:10px;
+      height:30px;
+      width:30px;
+      border:hidden;
+      font-size:15px;
+      background-color:  #F3FBFE;
+      text-align:center;
+      vertical-align: bottom;
+}
+
+/*
+Css for Add Button
+*/
+
+
+.add-table-style{
+      width:100%;
+      font-family: century-gothic;
+      font-size: 2.2vh;
+      border:none;
+}
+
+
+.add-table-style tr{
+      line-height: 2vh;
+}
+
+.add-input-box{
+      border-bottom-color: #f48400;
+      border-right:hidden;
+      border-left:hidden;
+      border-top:hidden;
+      background-color: #F3FBFE;
+      width:220px;
+      height:30px;
+      margin-top: 2px;
+}
+
+.add-input-box:focus{
+      outline:none;
+}
+
+.readonly-input{
+      opacity:0.6;
+}
+
+.add-suggested-orderid{
+      width:100px;
+      height:30px;
+      margin-top: 2px;
+      color:#fff;
+}
+

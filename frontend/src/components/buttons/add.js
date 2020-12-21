@@ -101,7 +101,7 @@ const AddButton = ({ addModalVisible, setAddModalVisible,
                   if (this.readyState === 4 && this.status === 200) {
                         const dataReceived = this.responseText;
                         if (dataReceived === "0") { //Duplicate Order_ID
-                              alert("Duplicate Order ID");
+                              //alert("Duplicate Order ID");
                               setOrderIDExist(true);
                               return;
                         }
@@ -150,7 +150,7 @@ const AddButton = ({ addModalVisible, setAddModalVisible,
                                                 </Tooltip>}>
                                                 <input className={"add-input-box arrow-hidden"} type="number"
                                                       id="order-id" min="0" value={orderID}
-                                                      style={{ width: orderID === "" ? "120px" : "220px" }}
+                                                      style={{ width: orderID === "" ? "110px" : "220px" }}
                                                       onChange={(e) => { setOrderID(e.target.value); }} />
                                           </OverlayTrigger>
                                           {orderID === "" ?

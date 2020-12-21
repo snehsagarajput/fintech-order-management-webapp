@@ -7,13 +7,12 @@ import AddButton from "./buttons/add.js";
 import EditButton from "./buttons/edit.js";
 
 const DATA = {
-      SOURCE: "http://localhost:8080/1704389/", //               http://localhost:8080/1704389/ 
+      SOURCE: "", //               http://localhost:8080/1704389/ 
       LEVEL_1_APPROVAL_AMOUNT: 10000
 };
 
 const UPPER_ORDER_AMOUNT = 10000000;
 const LOWER_ORDER_AMOUNT = 1;
-const WIDTH_THRESHOLD = 700;
 
 function Dashboard({ cookies }) {
       const [tableData, setTableData] = useState("");
@@ -24,26 +23,11 @@ function Dashboard({ cookies }) {
       const [checkedOrderID, setCheckedOrderID] = useState(null);
       const [addModalVisible, setAddModalVisible] = useState(false);
       const [editModalVisible, setEditModalVisible] = useState(false);
-      const [changeLayout, setChangeLayout] = useState(false);
 
       document.title = "Dashboard";
       const level = cookies.get("level");
       const username = cookies.get("username");
 
-      const handleResize = () => {
-            if (window.screen.width < WIDTH_THRESHOLD) {
-                  setChangeLayout(true);
-            }
-            else {
-                  setChangeLayout(false);
-            }
-      }
-
-      useEffect(() => {
-            handleResize();
-            window.addEventListener("resize", handleResize);
-            return () => window.removeEventListener("resize", handleResize);
-      }, []);
 
       const handleSignout = () => {
             if (cookies.get("level") !== null) {
@@ -207,7 +191,9 @@ function Dashboard({ cookies }) {
                                           </div> : null}
                                     <input type="number" min="0" className={"search-box arrow-hidden"} placeholder=" Search"
                                           id="search" onChange={(e) => {
-                                                setSearchValue(e.target.value);
+                                                setTimeout(() => {
+                                                      setSearchValue(e.target.value);
+                                                }, 800);
                                           }} autoComplete="off" />
 
                               </div>

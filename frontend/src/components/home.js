@@ -4,7 +4,7 @@ import { Redirect, withRouter } from 'react-router-dom';
 import "./style.css";
 
 const DATA = {
-      SOURCE: "http://localhost:8080/1704389/", //               http://localhost:8080/1704389/ 
+      SOURCE: "", //               http://localhost:8080/1704389/ 
       LEVEL_1_APPROVAL_AMOUNT: 10000
 };
 

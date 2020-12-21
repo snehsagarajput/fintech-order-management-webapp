@@ -2,9 +2,9 @@ import React from 'react';
 
 function Table({ data, setTotalPage, setNoOfRows, setCheckedOrderID, resetTableColors }) {
       const orderIDs = [];
-      const handleCheckbox = () => {
+      const handleCheckbox = (checkedID) => {
+            //console.log(checkedID);
             resetTableColors();
-            const checkedID = document.querySelector('.checkbox:checked').value;
             document.getElementById(checkedID).style.backgroundColor = "#fc750020";
             setCheckedOrderID(checkedID);
       }
@@ -49,7 +49,7 @@ function Table({ data, setTotalPage, setNoOfRows, setCheckedOrderID, resetTableC
                         return <tr id={entry.Order_ID} key={keyVal++} name={colorCount % 2 ? "even" : "odd"}
                               className={(colorCount++) % 2 ? "even-row" : "odd-row"}>
                               <input key={keyVal++} type="radio" name={"checkbox"} className="checkbox"
-                                    value={entry.Order_ID} onClick={() => handleCheckbox()} />
+                                    value={entry.Order_ID} onClick={() => handleCheckbox(entry.Order_ID)} />
                               <td className={"cell-style"} key={keyVal++} >{nullReplacer(covertDateFormat(entry.Order_Date))}</td>
                               <td className={"cell-style"} key={keyVal++} >{nullReplacer(entry.Approved_By)}</td>
                               <td className={"cell-style"} key={keyVal++} >{nullReplacer(entry.Order_ID)}</td>
